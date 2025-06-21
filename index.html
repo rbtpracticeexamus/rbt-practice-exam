@@ -1,30 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RBT Practice Quiz</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBT Practice Exam - Free 100-Question RBT Test Prep</title>
+    <meta name="description" content="Ace your RBT exam with our comprehensive 100-question RBT Practice Exam. Mimics the real BACB RBT test format. Prepare effectively and boost your confidence!">
+    <meta name="keywords" content="RBT practice exam, RBT exam prep, RBT test, Registered Behavior Technician, BACB RBT, RBT certification, ABA practice questions, RBT study guide, RBT task list">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RBT Practice Exam - Free 100-Question RBT Test Prep">
+    <meta property="og:description" content="Ace your RBT exam with our comprehensive 100-question RBT Practice Exam. Mimics the real BACB RBT test format. Prepare effectively and boost your confidence!">
+    <meta property="twitter:title" content="RBT Practice Exam - Free 100-Question RBT Test Prep">
+    <meta property="twitter:description" content="Ace your RBT exam with our comprehensive 100-question RBT Practice Exam. Mimics the real BACB RBT test format. Prepare effectively and boost your confidence!">
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-  <div class="quiz-container">
-    <h1>RBT Practice Quiz</h1>
-    <form id="quiz-form">
-      <!-- Question Container -->
-      <div id="question-container"></div>
+    <div id="exam-container">
+        <header>
+            <h1>RBT Practice Exam</h1>
+            <div id="timer-container">
+                Time Remaining: <span id="time">00:00</span>
+            </div>
+        </header>
 
-      <!-- Submit Button -->
-      <button type="button" id="submit-btn">Submit Answers</button>
-    </form>
+        <div class="intro-text">
+            <p>Welcome to your go-to <strong>RBT Practice Exam</strong>, designed to mirror the style and rigor of the official <a href="https://www.bacb.com/rbt/" target="_blank" rel="noopener noreferrer">Registered Behavior Technician certification exam</a> administered by the BACB®. Preparing for the RBT exam can be challenging, but with targeted practice, you can significantly increase your chances of success.</p>
+            <p>This comprehensive tool features a 100-question bank covering key areas of the <a href="https://www.bacb.com/wp-content/uploads/2020/05/RBT-2nd-Edition-Task-List_240830-a.pdf" target="_blank" rel="noopener noreferrer" title="RBT Task List 2nd Edition">RBT Task List (2nd Ed.)</a>, including Measurement, Assessment, Skill Acquisition, Behavior Reduction, Documentation and Reporting, and Professional Conduct. Our <strong>RBT exam prep</strong> quiz is meticulously crafted to help you identify your strengths and weaknesses.</p>
+            <p>By simulating the actual exam environment, including a timer and diverse question formats, you'll build confidence and improve your test-taking strategies. This particular exam suite, with its extensive question bank, is inspired by the comprehensive resources available at <a href="https://rbtpracticeexam.us/" target="_blank" title="RBT Practice Exam">https://rbtpracticeexam.us</a>, a dedicated platform for aspiring RBTs seeking high-quality study materials.</p>
+            <p>Take this free <strong>RBT practice test</strong> as many times as you need. Review your answers, understand the rationale, and get ready to pass your RBT certification with flying colors! Your journey to becoming a certified RBT starts with thorough preparation – let us help you get there.</p>
+        </div>
 
-    <!-- Results Section -->
-    <div id="results" class="hidden">
-      <h2>Your Results</h2>
-      <p id="score"></p>
-      <p id="feedback"></p>
+        <div id="quiz-area">
+            <div id="question-header">
+                <span id="question-number">Question X of Y</span>
+            </div>
+            <p id="question-text">Loading question...</p>
+            <ul id="options-list">
+                <!-- Options will be dynamically inserted here -->
+            </ul>
+        </div>
+
+        <div id="navigation-controls">
+            <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+            <button id="next-btn" class="nav-btn">Next</button>
+            <button id="finish-btn" class="nav-btn finish">Finish Exam</button>
+        </div>
+
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <div id="results-area" style="display:none;">
+            <h2>Exam Results</h2>
+            <p>Your Score: <strong id="score-percentage"></strong>% (<span id="score-actual"></span> out of <span id="total-questions"></span>)</p>
+            <p id="pass-fail-message"></p>
+            <p id="result-summary"></p>
+            <button id="review-answers-btn" class="nav-btn">Review Answers</button>
+            <button id="restart-btn" class="nav-btn">Restart Exam</button>
+        </div>
+
+        <div id="review-area" style="display:none;">
+             <h2>Review Your Answers</h2>
+             <div id="review-content"></div>
+             <button id="back-to-results-btn" class="nav-btn">Back to Results</button>
+        </div>
+
     </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
